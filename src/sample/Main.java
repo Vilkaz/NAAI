@@ -1,5 +1,7 @@
 package sample;
 
+import controller.SudokuGenerator;
+import controller.SudokuViewController;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
@@ -11,9 +13,10 @@ public class Main extends Application {
     @Override
     public void start(Stage primaryStage) throws Exception{
         VBox root = new VBox();
+        VBox numberField = SudokuViewController.getNumberfieldFromList(SudokuGenerator.getSudokuList());
         primaryStage.setTitle("NAAI 0.1");
-        Button generateSudoku = new Button("generate sudoku");
-        root.getChildren().addAll(generateSudoku);
+        VBox content = new VBox(numberField);
+        root.getChildren().addAll(content,SudokuViewController.getButton(content));
         primaryStage.setScene(new Scene(root, 300, 275));
         primaryStage.show();
     }
