@@ -53,15 +53,14 @@ public class SudokuGenerator {
                 SudokuGenerator.x.get(i).clear();
                 SudokuGenerator.y.get(i).clear();
                 SudokuGenerator.cubic.get(i).clear();
-
             }
     }
 
     private static boolean isUnique(int row, int collumn, int number) {
         if (
                 (SudokuGenerator.x.get(collumn).contains(number)) ||
-                        (SudokuGenerator.y.get(row).contains(number)) ||
-                        (SudokuGenerator.cubic.get(getCubicleNumber(row, collumn)).contains(number))) {
+                 (SudokuGenerator.y.get(row).contains(number)) ||
+                (SudokuGenerator.cubic.get(getCubicleNumber(row, collumn)).contains(number))) {
             return false;
         }
         return true;
@@ -89,9 +88,7 @@ public class SudokuGenerator {
     }
 
     private static int getCubicleNumber(int row, int collumn) {
-        int yHelper;
-        yHelper=  ((row / 3) * 3) + (collumn / 3);
-        return  yHelper;
+        return  ((row / 3) * 3) + (collumn / 3);
     }
 
 }
