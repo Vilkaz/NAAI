@@ -1,3 +1,8 @@
 .cubicle{
     -fx-border-width: 5px;
 }
+
+
+.verticalBorder{
+    -fx-border-width: 2px;
+}

@@ -13,8 +13,6 @@ public class SudokuGenerator {
     private static ArrayList<ArrayList<Integer>> x          = new ArrayList<ArrayList<Integer>>();
     private static ArrayList<ArrayList<Integer>> y          = new ArrayList<ArrayList<Integer>>();
     private static ArrayList<ArrayList<Integer>> cubic      = new ArrayList<ArrayList<Integer>>();
-    private static ArrayList<Integer>            candidates = new ArrayList<Integer>(
-            Arrays.asList(1, 2, 3, 4, 5, 6, 7, 8, 9));
 
     private static void initArrayList() {
         for (int i = 0; i <= 8; i++) {
@@ -94,15 +92,6 @@ public class SudokuGenerator {
         int yHelper;
         yHelper=  ((row / 3) * 3) + (collumn / 3);
         return  yHelper;
-    }
-
-
-    public static ArrayList<Integer> getSudokuAsList(){
-        ArrayList<Integer> list = new ArrayList<Integer>();
-        for (int i = 1; i <= 81; i++) {
-            list.add(i);
-        }
-        return list;
     }
 
 }
