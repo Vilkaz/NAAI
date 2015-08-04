@@ -18,6 +18,8 @@ import java.util.ArrayList;
  */
 public class SudokuViewController {
 
+    /** if given a ArrayList of specific length, it wil be represented
+     * in Field of Textfields */
     public static VBox getNumberfieldFromList(ArrayList<Integer> list){
         int amountOfRows = 9;
         int amountOfCollumns = 9;
@@ -35,7 +37,8 @@ public class SudokuViewController {
     }
 
 
-
+    /** on click the button clears the content VBox, and fills the Content with new
+     * Sudoku Field */
     public static Button getButton(final VBox content){
         Button button = new Button("generate random sudoku");
         button.setOnAction(new EventHandler<ActionEvent>() {

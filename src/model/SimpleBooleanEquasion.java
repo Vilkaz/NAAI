@@ -7,4 +7,6 @@ package model;
  * Time: 4:34 PM
  */
 public class SimpleBooleanEquasion {
+    private int fieldNumber;
+    private int mathematicalOperatorKey;
 }
